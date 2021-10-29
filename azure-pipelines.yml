@@ -13,17 +13,10 @@ variables:
   # Web app name
   webAppName: 'res-php-api1979'
 
-  # Agent VM image name
-  vmImageName: 'ubuntu-latest'
-
   # Environment name
   environmentName: 'res-php-api1979'
 
-  # Root folder under which your composer.json file is available.
-  rootFolder: $(System.DefaultWorkingDirectory)
-
-
-    - task: ArchiveFiles@2
+     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
         rootFolderOrFile: '$(rootFolder)'
