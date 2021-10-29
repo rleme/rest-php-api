@@ -13,38 +13,6 @@ variables:
   # Web app name
   webAppName: 'res-php-api1979'
 
-  # Agent VM image name
-  vmImageName: 'ubuntu-latest'
-
-  # Environment name
-  environmentName: 'res-php-api1979'
-
-  # Root folder under which your composer.json file is available.
-  rootFolder: $(System.DefaultWorkingDirectory)
-
-stages:
-- stage: Build
-  displayName: Build stage
-  variables:
-    phpVersion: '7.3'
-  jobs:
-  - job: BuildJob
-    pool:
-      vmImage: $(vmImageName)
-    steps:
-    - script: |
-        sudo update-alternatives --set php /usr/bin/php$(phpVersion)
-        sudo update-alternatives --set phar /usr/bin/phar$(phpVersion)
-        sudo update-alternatives --set phpdbg /usr/bin/phpdbg$(phpVersion)
-        sudo update-alternatives --set php-cgi /usr/bin/php-cgi$(phpVersion)
-        sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
-        php -version
-      workingDirectory: $(rootFolder)
-      displayName: 'Use PHP version $(phpVersion)'
-
-    - script: composer install --no-interaction --prefer-dist
-      workingDirectory: $(rootFolder)
-      displayName: 'Composer install'
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
