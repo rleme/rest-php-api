@@ -6,24 +6,24 @@ Website: https://www.allphptricks.com
 ?>
 <html>
 <head>
-<title>Demo Create and Consume Simple REST API in PHP - AllPHPTricks.com</title>
+<title>Consulta Crédito Capivara Inc.</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
 <div style="width:700px; margin:0 auto;">
 
-<h3>Demo Create and Consume Simple REST API in PHP</h3>   
+<h3>API - Consumo de API - PHP</h3>   
 <form action="" method="POST">
-<label>Enter Order ID:</label><br />
-<input type="text" name="order_id" placeholder="Enter Order ID" required/>
+<label>Entre com CPF:</label><br />
+<input type="text" name="order_id" placeholder="Enter  ID" required/>
 <br /><br />
-<button type="submit" name="submit">Submit</button>
+<button type="submit" name="submit">Consultar</button>
 </form>    
 
 <?php
 if (isset($_POST['order_id']) && $_POST['order_id']!="") {
 	$order_id = $_POST['order_id'];
-	$url = "http://https://res-php-api1979.azurewebsites.ne/rest/api/".$order_id;
+	$url = "http://localhost/rest/api/".$order_id;
 	
 	$client = curl_init($url);
 	curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
@@ -32,23 +32,21 @@ if (isset($_POST['order_id']) && $_POST['order_id']!="") {
 	$result = json_decode($response);
 	
 	echo "<table>";
-	echo "<tr><td>Order ID:</td><td>$result->order_id</td></tr>";
-	echo "<tr><td>Amount:</td><td>$result->amount</td></tr>";
-	echo "<tr><td>Response Code:</td><td>$result->response_code</td></tr>";
-	echo "<tr><td>Response Desc:</td><td>$result->response_desc</td></tr>";
+	echo "<tr><td>CPF:</td><td>$result->order_id</td></tr>";
+	echo "<tr><td>Valor:</td><td>$result->amount</td></tr>";
+	echo "<tr><td>Score:</td><td>$result->response_code</td></tr>";
+	echo "<tr><td>Status:</td><td>$result->response_desc</td></tr>";
 	echo "</table>";
 }
     ?>
 
 <br />
-<strong>Sample Order IDs for Demo:</strong><br />
+<strong>Condições</strong><br />
+NADA CONSTA -> Vende<br />
+CONSTA NÃO VENDE<br />
 15478952<br />
-15478955<br />
-15478958<br />
-15478959
+15478962
 <br /><br />
-<a href="https://www.allphptricks.com/create-and-consume-simple-rest-api-in-php/"><strong>Tutorial Link</strong></a> <br /><br />
-For More Web Development Tutorials Visit: <a href="https://www.allphptricks.com/"><strong>AllPHPTricks.com</strong></a>
 </div>
 </body>
 </html>
