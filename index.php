@@ -23,7 +23,7 @@ Website: https://www.allphptricks.com
 <?php
 if (isset($_POST['order_id']) && $_POST['order_id']!="") {
 	$order_id = $_POST['order_id'];
-	$url = "http://localhost/rest/api/".$order_id;
+	$url = "https://github.com/rleme/rest-php-api.git/rest/api/".$order_id;
 	
 	$client = curl_init($url);
 	curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
