@@ -3,7 +3,7 @@
 # $ php -f db-connect-test.php
 
 $dbname = 'allphptricks';
-$dbuser = 'api';
+$dbuser = 'api@apidb1979';
 $dbpass = 'Bi@06gata';
 $dbhost = 'apidb1979.mysql.database.azure.com';
 
