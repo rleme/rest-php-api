@@ -6,13 +6,13 @@ Website: https://www.allphptricks.com
 ?>
 <html>
 <head>
-<title>Consulta Crédito Capivara Inc.</title>
+<title>Analise de Credito Capivara Inc.</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
 <div style="width:700px; margin:0 auto;">
 
-<h3>API - Consumo de API - PHP</h3>   
+<h3>API - Consumo de API - PHP - MySQL</h3>   
 <form action="" method="POST">
 <label>Entre com CPF:</label><br />
 <input type="text" name="order_id" placeholder="Enter  ID" required/>
