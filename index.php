@@ -41,9 +41,9 @@ if (isset($_POST['order_id']) && $_POST['order_id']!="") {
     ?>
 
 <br />
-<strong>Condições</strong><br />
-NADA CONSTA -> Vende<br />
-CONSTA NÃO VENDE<br />
+<strong>Regras</strong><br />
+NADA CONSTA -> CONCEDE CREDITOe<br />
+CONSTA -> NEGAR CREDITO<br />
 15478952<br />
 15478962
 <br /><br />
