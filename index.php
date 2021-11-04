@@ -23,7 +23,7 @@ Website: https://www.allphptricks.com
 <?php
 if (isset($_POST['order_id']) && $_POST['order_id']!="") {
 	$order_id = $_POST['order_id'];
-	$url = "https://res-php-api1979.azurewebsites.net/api/".$order_id;
+	$url = "https://res-php-api.azurewebsites.net/rest/api/".$order_id;
 	
 	$client = curl_init($url);
 	curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
