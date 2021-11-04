@@ -42,7 +42,7 @@ if (isset($_POST['order_id']) && $_POST['order_id']!="") {
 
 <br />
 <strong>Regras</strong><br />
-NADA CONSTA -> CONCEDE CREDITOe<br />
+NADA CONSTA -> CONCEDE CREDITO<br />
 CONSTA -> NEGAR CREDITO<br />
 15478952<br />
 15478962
