@@ -30,7 +30,9 @@ if (isset($_POST['order_id']) && $_POST['order_id']!="") {
 	$response = curl_exec($client);
 	
 	$result = json_decode($response);
-	$a > $b;
+	$var = 'foo';
+	$$var = 'bar';
+	$$$var = 'hello'
 	echo "<table>";
 	echo "<tr><td>CPF:</td><td>$result->order_id</td></tr>";
 	echo "<tr><td>Valor:</td><td>$result->amount</td></tr>";
