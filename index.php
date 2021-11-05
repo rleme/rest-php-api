@@ -12,7 +12,7 @@ Website: https://www.allphptricks.com
 <body>
 <div style="width:700px; margin:0 auto;">
 
-<h3>API - Consumo de API - PHP - MySQL - 1.0</h3>   
+<h3>API - Consumo de API - PHP - MySQL - 1.1</h3>   
 <form action="" method="POST">
 <label>Entre com CPF:</label><br />
 <input type="text" name="order_id" placeholder="Enter  ID" required/>
@@ -45,7 +45,7 @@ if (isset($_POST['order_id']) && $_POST['order_id']!="") {
 <br />
 <strong>Regras</strong><br />
 NADA CONSTA -> CONCEDE CREDITO<br />
-CONSTA -> NEGAR CREDITO<br />
+CONSTA ------> NEGAR CREDITO<br />
 15478952<br />
 15478962
 <br /><br />
