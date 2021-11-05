@@ -22,7 +22,7 @@ function response($order_id,$amount,$response_code,$response_desc){
 	$response['cpf'] = $order_id;
 	$response['valor'] = $amount;
 	$response['score'] = $response_code;
-	$response['situacao'] = $response_desc;
+	$response['status'] = $response_desc;
 	
 	$json_response = json_encode($response);
 	echo $json_response;
