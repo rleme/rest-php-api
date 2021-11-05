@@ -19,10 +19,10 @@ if (isset($_GET['order_id']) && $_GET['order_id']!="") {
 	}
 
 function response($order_id,$amount,$response_code,$response_desc){
-	$response['order_id'] = $order_id;
-	$response['amount'] = $amount;
-	$response['response_code'] = $response_code;
-	$response['response_desc'] = $response_desc;
+	$response['cpf'] = $order_id;
+	$response['valor'] = $amount;
+	$response['score'] = $response_code;
+	$response['situacao'] = $response_desc;
 	
 	$json_response = json_encode($response);
 	echo $json_response;
