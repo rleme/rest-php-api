@@ -7,6 +7,9 @@ $dbuser = 'api';
 $dbpass = 'Bi@06gata';
 $dbhost = 'res-php-api1979.mysql.database.azure.com';
 
+$teste = getenv("dbuser");
+echo $teste;
+
 $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
 mysqli_select_db($link, $dbname) or die("Could not open the db '$dbname'");
 
