@@ -1,8 +1,4 @@
 <?php
-/*
-Author: Javed Ur Rehman
-Website: https://www.allphptricks.com
-*/
 ?>
 <html>
 <head>
@@ -15,7 +11,7 @@ Website: https://www.allphptricks.com
 <h3>API - Consumo de API - PHP - MySQL - 1.3</h3>   
 <form action="" method="POST">
 <label>Entre com CPF:</label><br />
-<input type="text" name="order_id" placeholder="Enter  ID" required/>
+<input type="text" name="order_id" placeholder="Entre com CPF" required/>
 <br /><br />
 <button type="submit" name="submit">Consultar</button>
 </form>    
@@ -30,11 +26,13 @@ if (isset($_POST['order_id']) && $_POST['order_id']!="") {
 	$response = curl_exec($client);
 	
 	$result = json_decode($response);
+	echo $result
+	echo $response
 	echo "<table>";
-	echo "<tr><td>CPF:</td><td>$result->order_id</td></tr>";
-	echo "<tr><td>Valor:</td><td>$result->amount</td></tr>";
-	echo "<tr><td>Score:</td><td>$result->response_code</td></tr>";
-	echo "<tr><td>Status:</td><td>$result->response_desc</td></tr>";
+	echo "<tr><td>CPF:</td><td>$result->cpf</td></tr>";
+	echo "<tr><td>Valor:</td><td>$result->valor</td></tr>";
+	echo "<tr><td>Score:</td><td>$result->score</td></tr>";
+	echo "<tr><td>Status:</td><td>$result->status</td></tr>";
 	echo "</table>";
 }
     ?>
