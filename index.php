@@ -12,7 +12,7 @@ Website: https://www.allphptricks.com
 <body>
 <div style="width:700px; margin:0 auto;">
 
-<h3>API - Consumo de API - PHP - MySQL - 1.1</h3>   
+<h3>API - Consumo de API - PHP - MySQL - 1.2</h3>   
 <form action="" method="POST">
 <label>Entre com CPF:</label><br />
 <input type="text" name="order_id" placeholder="Enter  ID" required/>
