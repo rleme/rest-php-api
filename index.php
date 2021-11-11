@@ -8,7 +8,7 @@
 <body>
 <div style="width:700px; margin:0 auto;">
 
-<h3>API - Consumo de API - PHP - MySQL - 1.4</h3>   
+<h3>API - Consumo de API - PHP - MySQL - 1.5</h3>   
 <form action="" method="POST">
 <label>Entre com CPF:</label><br />
 <input type="text" name="order_id" placeholder="Entre com CPF" required/>
@@ -26,8 +26,6 @@ if (isset($_POST['order_id']) && $_POST['order_id']!="") {
 	$response = curl_exec($client);
 	
 	$result = json_decode($response);
-	echo $result
-	echo $response
 	echo "<table>";
 	echo "<tr><td>CPF:</td><td>$result->cpf</td></tr>";
 	echo "<tr><td>Valor:</td><td>$result->valor</td></tr>";
